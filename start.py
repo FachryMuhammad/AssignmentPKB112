@@ -25,8 +25,9 @@ images = np.hstack((bias,images))
 t_bias = np.ones((x2,1))
 t_images = np.hstack((t_bias,t_images))
 
-n=np.size(images)
-num_classes= 10
+#n=np.size(images)
+num_classes= len(np.unique(labels))
 
-theta = np.random(n,numclasses-1)*0.001
+theta = np.random.randint(y2,(num_classes-1))*0.001
 
+print (theta)
