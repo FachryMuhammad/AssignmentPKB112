@@ -14,11 +14,20 @@ def print_statistics(images, t_images, labels, t_labels):
     for i in np.unique(t_labels):
         np.sum(t_labels==i)
 
-def add_thetas(theta):
-    return
+#def add_thetas(theta):
+#    return
 
 def hypothesis(images, labels):
+    (x,y) = images.shape
+    num_classes= len(labels)
+    trans= np.matrix.transpose(x)
+
+    add_thetas =0
+    for i in range (num_classes-1):
+        theta = np.random.rand(x,(y-1))*0.001
+        add_thetas += theta * trans
+
     b=labels
-    a=images
-    jumlah_kelas = 1/a*b
-    return jumlah_kelas
+    a=np.exp(theta)
+    h = 1/a*b
+    return h
