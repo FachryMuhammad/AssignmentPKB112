@@ -11,22 +11,6 @@ t_images = np.array(t_images)
 labels = np.array(labels)
 t_labels = np.array(t_labels)
 
-print("training instances ;", images.shape[0])
-print("testing instances ;", t_images.shape[0])
-
-num_class = len(np.unique(labels))
-
-print("there are :", num_class, "classes")
-
-for i in range(num_class):
-    print("class", i, "instances : ", np.sum(labels==i))
-
-print("statistics for testing")
-
-for i in range(num_class):
-    print("class :", i, "instances : ", np.sum(t_labels==i))
-
-
 print_statistics(images, t_images, labels, t_labels)
 
 #convert .m file ex1c_softmax.m
@@ -50,6 +34,5 @@ num_class = len(np.unique(labels))
 #num_class = len(labels)
 
 
-#test
+
 theta=np.random.rand(x,y-1)*0.001
-#print (theta)
