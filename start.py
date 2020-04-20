@@ -1,6 +1,7 @@
 
 from mnist import MNIST
 import numpy as np
+from lib import *
 
 mndata = MNIST('./data')
 images,labels = mndata.load_training()
@@ -25,4 +26,6 @@ print("statistics for testing")
 
 for i in range(num_class):
     print("class :", i, "instances : ", np.sum(t_labels==i))
-    
+
+
+print_statistics(images, t_images, labels, t_labels)
