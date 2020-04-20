@@ -21,19 +21,4 @@ def add_thetas(images, theta):
     sum_exp_thetas= np.exp(sum)    
     return sum_exp_thetas
 
-def hypothesis(theta, images, labels):
-    #(x,y) = images.shape
-    im_size = np.unique(labels)
-    t=theta
-    vec_theta=[]
-    sum_theta=[]
-
-    for i in range (im_size):
-        vec_theta.append(add_thetas(images, t[:,i]))
-        sum_theta = np.sum(vec_theta)
-
-    a=vec_theta
-    b=sum_theta
-    h = a/b
-    return h
 
