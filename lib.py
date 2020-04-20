@@ -1,6 +1,6 @@
 import numpy as np
 
-print_statistics(images, t_images, labels, t_labels):
+def print_statistics(images, t_images, labels, t_labels):
     #number of training dataset
     len(labels)
     #number of test dataset
@@ -14,3 +14,12 @@ print_statistics(images, t_images, labels, t_labels):
     for i in np.unique(t_labels):
         np.sum(t_labels==i)
 
+def add_thetas(theta):
+    return
+
+def hypothesis(images, labels):
+    c=labels
+    b=1
+    a = 1/b
+    jumlah_kelas = 
+    return jumlah_kelas
