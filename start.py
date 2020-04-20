@@ -15,16 +15,11 @@ t_images, t_labels = mndata.load_testing()
 #train.y = train.y+1; % make labels 1-based.            18
 #test.y = test.y+1; % make labels 1-based.              19
 
-#line 16
 (x,y) = images.shape
-bias = np.ones((m,1))
+bias = np.ones((x,1))
 images = np.hstack((bias,images))
 
-#line 17
+
 (x2,y2) = t_images.shape
-t_bias = np.ones((m2,1))
+t_bias = np.ones((x2,1))
 t_images = np.hstack((t_bias,t_images))
-
-#line 18
-
-#line 19
