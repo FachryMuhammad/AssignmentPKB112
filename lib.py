@@ -18,8 +18,7 @@ def add_thetas(theta):
     return
 
 def hypothesis(images, labels):
-    c=labels
-    b=1
-    a = 1/b
-    jumlah_kelas = 
+    b=labels
+    a=images
+    jumlah_kelas = 1/a*b
     return jumlah_kelas
