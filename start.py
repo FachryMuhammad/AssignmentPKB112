@@ -7,6 +7,7 @@ mndata = MNIST('./data')
 images,labels = mndata.load_training()
 t_images, t_labels = mndata.load_testing()
 
+print_statistics(images, t_images, labels, t_labels)
 
 #convert .m file ex1c_softmax.m
 
